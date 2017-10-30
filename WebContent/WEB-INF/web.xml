@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ServletDemo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>FirstPage.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+    <param-name>MyDriver</param-name>
+    <param-value>jdbc:oracle:thin:@database-server:1521:oracle11g</param-value>
+  </context-param>
+  <servlet>
+    <description></description>
+    <display-name>MyServlet</display-name>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>com.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/MyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MyPagination</display-name>
+    <servlet-name>MyPagination</servlet-name>
+    <servlet-class>com.MyPagination</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyPagination</servlet-name>
+    <url-pattern>/MyPagination</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Genre</display-name>
+    <servlet-name>Genre</servlet-name>
+    <servlet-class>com.Genre</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Genre</servlet-name>
+    <url-pattern>/Genre</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>language</display-name>
+    <servlet-name>language</servlet-name>
+    <servlet-class>com.language</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>language</servlet-name>
+    <url-pattern>/language</url-pattern>
+  </servlet-mapping>
+  
+  <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.3.1</version>
+        <scope>provided</scope>
+</dependency>
+</web-app>
